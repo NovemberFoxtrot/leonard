@@ -37,7 +37,7 @@ func FetchUrl(theurl string) string {
 		sir.CheckError(err)
 
 		transport := http.Transport{
-			Dial:  TimeoutDialer(5*time.Second, 5*time.Second), // connect, read/write
+			Dial:  TimeoutDialer(5*time.Second, 5*time.Second),
 			Proxy: http.ProxyURL(proxyUrl),
 		}
 
